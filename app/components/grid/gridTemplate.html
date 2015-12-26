@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-12 col-md-12 grid-head-row">
+        <div ng-repeat="column in columns track by $index">
+            <div ng-class="column.class"  ng-click="setOrderBy(column)">
+                <span ng-bind="column.name"> </span>
+                <span class="sort-order" ng-show="column.sortableValue && order.columnName === column.columnName" ng-class="{reverse:order.asc}"></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 grid-body-row" ng-repeat="account in data | gridFilterValue:filterValue | orderBy: order.sortableValue : order.asc ">
+        <div ng-repeat="column in columns track by $index" ng-class="column.class" class="col-md-12">
+            <div ng-include="column.templateUrl"></div>
+        </div>
+    </div>
+</div>

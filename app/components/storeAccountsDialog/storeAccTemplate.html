@@ -1,0 +1,58 @@
+<div id="accountDialog" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="close" aria-label="Close" data-dismiss="modal" >
+                    <span aria-hidden="true">&times;</span>
+                </div>
+                <h4 class="modal-title" id="gridSystemModalLabel" ng-bind="vm.dialogTitle"></h4>
+            </div>
+            <div class="modal-body" ng-form name="vm.accountForm">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label for="nameCntr">Photo URL</label>
+                            <input type="url" name="url" class="form-control"  placeholder="Enter photo url" ng-model="vm.obj.client.photo" required
+                                   ng-class="{ 'has-error': vm.accountForm.url.$touched && vm.accountForm.url.$invalid }">
+                            <div class="help-block" ng-messages="vm.accountForm.url.$error" ng-if="vm.submitted">
+                                <p ng-message="required">Your url is required.</p>
+                                <p ng-message="url">Your url is invalid.</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <label for="storeNameCntr">Name</label>
+                            <input type="text" name="name" class="form-control"  placeholder="Enter name" ng-model="vm.obj.client.name" required
+                                   ng-class="{ 'has-error': vm.accountForm.name.$touched && vm.accountForm.storeName.$invalid }">
+                            <div class="help-block" ng-messages="vm.accountForm.name.$error" ng-if="vm.submitted">
+                                <p ng-message="required">Name is required.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label for="nameCntr">Phone</label>
+                            <input type="text" name="phone" class="form-control"  placeholder="Enter phone" ng-model="vm.obj.client.phone" required
+                                   ng-class="{ 'has-error': vm.accountForm.phone.$touched && vm.accountForm.phone.$invalid }">
+                            <div class="help-block" ng-messages="vm.accountForm.phone.$error" ng-if="vm.submitted">
+                                <p ng-message="required">Phone is required.</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <label for="storeNameCntr">Email</label>
+                            <input type="email" name="email" class="form-control"  placeholder="Enter email" ng-model="vm.obj.client.email" required
+                                   ng-class="{ 'has-error': vm.accountForm.email.$touched && vm.accountForm.email.$invalid }">
+                            <div class="help-block" ng-messages="vm.accountForm.email.$error" ng-if="vm.submitted">
+                                <p ng-message="required">Email is required.</p>
+                                <p ng-message="email">Email is invalid.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="btn btn-primary pull-left"  ng-click="vm.savePurchase()" >Add</div>
+                <div class="btn btn-default pull-left" data-dismiss="modal">Cancel</div>
+            </div>
+        </div>
+    </div>
+</div>

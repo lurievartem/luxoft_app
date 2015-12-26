@@ -1,0 +1,22 @@
+{
+  "name": "angularLuxofttask",
+  "version": "0.0.1",
+  "authors": [
+    "Artem Luriev"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-messages": "~1.4.5",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.5",
+    "restangular": "~1.5.1"
+  }
+}

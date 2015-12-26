@@ -1,0 +1,5 @@
+<div class="table-cell-accounts text-overflow">
+    <span class="table-cell-acounts-length" ng-if="account[column.columnName].length > 1" ng-bind="account[column.columnName].length + ' accounts:'"></span>
+    <a class="table-cell-acounts-id" ng-bind="account[column.columnName][0].id"></a>
+    <span ng-bind="account[column.columnName][0].descr"></span>
+</div>

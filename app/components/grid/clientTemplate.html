@@ -1,0 +1,13 @@
+<div class="table-cell-clients row">
+    <div class="col-xs-2">
+        <img ng-src="{{account[column.columnName].photo}}"  class="img-circle">
+    </div>
+    <div class="col-xs-5">
+        <div class="table-cell-client-name" ng-bind="account[column.columnName].name"></div>{{maskeSSN}}
+        <div ng-bind="account[column.columnName].index|gridMaskedSSN"></div>
+    </div>
+    <address class="col-xs-5">
+        <div ng-bind="account[column.columnName].phone"></div>
+        <a class="table-cell-client-email" ng-href="mailto:{{account[column.columnName].email}}">{{account[column.columnName].email}}</a>
+    </address>
+</div>

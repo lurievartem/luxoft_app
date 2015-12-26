@@ -1,0 +1,7 @@
+<div class="table-cell-notes text-overflow">
+    <div class="table-cell-note-text" ng-bind="account[column.columnName][0].note"></div>
+    <div>
+        <span ng-bind="account[column.columnName][0].date"></span><span ng-if="account[column.columnName].length > 1">,</span>
+        <span class="table-cell-note-length" ng-if="account[column.columnName].length > 1" ng-bind="'+ ' + account[column.columnName].length + ' more'"></span>
+    </div>
+</div>
